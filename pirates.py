@@ -12,7 +12,7 @@ def connect_to_db():
     return (conn, db)
 
 
-def list_ingredients(db):
+def list_pirates(db):
     query = """SELECT * FROM pirates;"""
     db.execute(query)
     results = db.fetchall()
@@ -23,7 +23,7 @@ def list_ingredients(db):
 
 def main():
     (conn, db) = connect_to_db()
-    list_ingredients(db)
+    list_pirates(db)
     conn.close()
 
 
