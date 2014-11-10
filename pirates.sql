@@ -3,12 +3,12 @@ drop table if exists ships;
 drop table if exists cargo;
 
 create table ships (
-    id int primary_key not null,
+    id integer primary key not null,
     name text not null
 );
 
 create table pirates (
-    id int primary_key not null,
+    id integer primary key not null,
     name text not null,
     ship_id int,
     foreign key(ship_id) references ships(id)
